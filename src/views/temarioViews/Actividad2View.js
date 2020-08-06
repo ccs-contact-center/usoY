@@ -11,7 +11,7 @@ import {
   Input,
 } from "reactstrap";
 import AuthService from "../../services/AuthService";
-import actividad2 from "../../assets/img/usoG/actividad2.png";
+import actividad2 from "../../assets/img/usoY/actividad2.png";
 import API_CCS from "../../services/API_CCS";
 const API = new API_CCS();
 
