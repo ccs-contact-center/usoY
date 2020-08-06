@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { CardBody, CardHeader, Col, Row } from 'reactstrap'
-import despedida2 from '../../assets/img/usoG/actividad3.png'
+import despedida2 from '../../assets/img/usoY/despedida.png'
 
 class PresentacionView extends Component {
   loading = () => (
