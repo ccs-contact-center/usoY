@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { CardBody, CardHeader, Col, Row } from 'reactstrap'
- import usoG from '../../assets/img/usoG/usoG.mp4'
+ import usoG from '../../assets/img/usoY/usoG.mp4'
 import ReactPlayer from 'react-player'
 
 class PresentacionView extends Component {
