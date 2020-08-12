@@ -9,6 +9,7 @@ import {
   FormGroup,
   Input,
 } from "reactstrap";
+import swal from "sweetalert"
 import actividad1 from "../../assets/img/usoY/actividad3.png";
 import API_CCS from "../../services/API_CCS";
 import AuthService from "../../services/AuthService";
@@ -48,8 +49,35 @@ class Actividad3View extends Component {
   async onSave(e) {
     try {
       var respuesta = await API.guardaActividad(this.state);
-      alert("Se guardo actividad: 3, con id: " + respuesta[0].id);
+
+      swal({
+        title: "Status Actividad",
+        text: "Se guardo la actividad: 3, con id: " + respuesta[0].id,
+        icon: "success",
+        dangerMode: true,
+        button: {
+          text: "Aceptar",
+          value: true,
+          visible: true,
+          className: "btn btn-primary",
+          reset: true,
+        },
+      });
+      
+      // alert("Se guardo la actividad: 1, con id: " + respuesta[0].id);
     } catch (err) {
+      swal({
+        title: "Status Actividad",
+        text: "No se guardo la actividad: 3, Intenta de nuevo. ",
+        icon: "error",
+        dangerMode: true,
+        button: {
+          text: "Cerrar",
+          value: true,
+          visible: true,
+          className: "btn btn-primary ",
+        },
+      });
       console.log("loggea si hay un error");
     }
   }
